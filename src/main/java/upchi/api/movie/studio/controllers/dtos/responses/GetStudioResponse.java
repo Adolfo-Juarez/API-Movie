@@ -17,5 +17,7 @@ public class GetStudioResponse {
     // No hace falta agregar Setters y Getters
 
     private Long id;
+    private String name;
+    private String headquarters;
 
 }

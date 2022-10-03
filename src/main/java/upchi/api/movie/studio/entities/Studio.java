@@ -25,5 +25,4 @@ public class Studio {
     private Long id;
     private String name;
     private String headquarters;
-//prueba
 }
