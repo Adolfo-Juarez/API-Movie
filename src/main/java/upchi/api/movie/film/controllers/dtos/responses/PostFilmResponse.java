@@ -3,12 +3,11 @@ package upchi.api.movie.film.controllers.dtos.responses;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter @Getter
-public class GetFilmResponse {
-
+@Getter @Setter
+public class PostFilmResponse {
+    
     private Long id;
     private String title;
-    private String img;
     private Float duration;
 
 }
