@@ -18,4 +18,10 @@ public class GetActorResponse {
 
     private Long id;
 
+    private String name;
+    private String lastName;
+    private Integer age;
+    private String nacionality;
+
+
 }

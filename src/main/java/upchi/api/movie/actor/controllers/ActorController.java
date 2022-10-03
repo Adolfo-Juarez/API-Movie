@@ -21,9 +21,6 @@ public class ActorController {
     // La interfaz del servicio ya están importados
 
     // Eliminar el método que viene por defecto  HelloWorld
-    @GetMapping
-    public String HelloWorld() {
-        return "Hello World, we're in Actor";
-    }
+
 
 }
