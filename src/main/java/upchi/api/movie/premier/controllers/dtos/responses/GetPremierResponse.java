@@ -1,16 +1,16 @@
-package upchi.api.movie.producer.controllers.dtos.responses;
+package upchi.api.movie.premier.controllers.dtos.responses;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter @Getter
-public class GetProducerResponse {
+public class GetPremierResponse {
 
     // Por Hacer: 
     // - Agregar atributos necesarios
     
     // Este DTO servirá para devolver la información necesaria
-    // de alguna petición GET para la entidad Producer
+    // de alguna petición GET para la entidad Premier
 
     // Id debe ser obligtorio dentro de los response para fines demostrativos
     

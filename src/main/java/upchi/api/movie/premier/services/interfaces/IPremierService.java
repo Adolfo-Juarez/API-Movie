@@ -1,6 +1,6 @@
-package upchi.api.movie.producer.services.interfaces;
+package upchi.api.movie.premier.services.interfaces;
 
-public interface IProducerService {
+public interface IPremierService {
     // Por Hacer:
     // - Genera las interfaces de lo métodos para los servicios
 
