@@ -14,4 +14,6 @@ public class PostStudioRequest {
     // de la entidad Studio en la base de datos
 
     // Generar los DTOS necesarios para lo demás métodos si lo consideran necesario
+    private String name;
+    private String headquarters;
 }
