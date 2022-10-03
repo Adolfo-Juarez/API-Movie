@@ -1,8 +1,16 @@
 package upchi.api.movie.film.services.interfaces;
 
-public interface IFilmService {
-    // Por Hacer:
-    // - Genera las interfaces de lo métodos para los servicios
+import java.util.List;
 
-    // Recuerda que mínimo deberán haber 4 métodos (del protocolo HTTP)
+import upchi.api.movie.film.controllers.dtos.requests.PostFilmRequest;
+import upchi.api.movie.film.controllers.dtos.responses.GetFilmResponse;
+import upchi.api.movie.film.controllers.dtos.responses.PostFilmResponse;
+
+public interface IFilmService {
+
+    public List<GetFilmResponse> list ();
+    public GetFilmResponse get(Long id);
+
+    public PostFilmResponse create(PostFilmRequest request);
+
 }
