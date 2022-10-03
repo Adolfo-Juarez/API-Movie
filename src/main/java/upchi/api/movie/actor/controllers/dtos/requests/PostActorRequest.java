@@ -3,15 +3,15 @@ package upchi.api.movie.actor.controllers.dtos.requests;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Column;
+
 @Setter @Getter
 public class PostActorRequest {
-    // Por Hacer:
-    // - Agregar los atributos para este DTO
-
-    // No es necesario agregar los métodos setter y getter para este método.
-
     // Este DTO es para mandar información para crear un nuevo registro
     // de la entidad Actor en la base de datos
-
-    // Generar los DTOS necesarios para lo demás métodos si lo consideran necesario
+    private String name;
+    private String lastName;
+    private String nickname;
+    private Integer age;
+    private String nacionality;
 }
