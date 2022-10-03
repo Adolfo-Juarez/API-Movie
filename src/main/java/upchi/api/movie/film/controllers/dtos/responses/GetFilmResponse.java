@@ -9,6 +9,6 @@ public class GetFilmResponse {
     private Long id;
     private String title;
     private String img;
-    private Integer duration;
+    private Float duration;
 
 }

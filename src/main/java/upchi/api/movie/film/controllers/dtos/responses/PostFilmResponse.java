@@ -8,6 +8,6 @@ public class PostFilmResponse {
     
     private Long id;
     private String title;
-    private Integer duration;
+    private Float duration;
 
 }
