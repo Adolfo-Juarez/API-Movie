@@ -14,14 +14,13 @@ import lombok.Setter;
 @Setter @Getter
 public class Director {
 
-    // Por Hacer:
-    // - Verifica que el nombre de la tabla esté generado correctamente
-    // - Añade los atributos necesarios, recuerda que debe ser en inglés
-
-    // No hace falta generar Getter y Setter
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+    private String lastname;
+    private String nickname;
+    private Integer age;
+    private String nacionality;
 }
