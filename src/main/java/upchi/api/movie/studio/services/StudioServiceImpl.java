@@ -19,11 +19,6 @@ public class StudioServiceImpl implements IStudioService{
     @Autowired
     IStudioRepository repository;
 
-    // Por Hacer:
-    // - Generar métodos en IStudioService y sobre escribir acá
-
-    // Los métodos del repositorio ya están siendo importados
-    // repository.metodo()
     @Override
     public List<GetStudioResponse> list(){
         return repository

@@ -1,31 +1,30 @@
-package upchi.api.movie.premier.entities;
-
-import java.util.Date;
+package upchi.api.movie.pivots;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
+import upchi.api.movie.actor.entities.Actor;
 import upchi.api.movie.film.entities.Film;
 
 @Entity
-@Table(name = "premiers")
+@Table(name="films_actors")
 @Setter @Getter
-public class Premier {
-
+public class FilmActor {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    Long id;
 
-    private Date date;
-    private String cine;
-
-    @OneToOne(mappedBy = "premier")
+    @ManyToOne
     private Film film;
-    
+
+    @ManyToOne
+    private Actor actor;
+
 }

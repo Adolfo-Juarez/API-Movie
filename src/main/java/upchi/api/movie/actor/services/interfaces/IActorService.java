@@ -25,4 +25,3 @@ public interface IActorService {
     public GetActorResponse getById(Long id);
 
 }
-

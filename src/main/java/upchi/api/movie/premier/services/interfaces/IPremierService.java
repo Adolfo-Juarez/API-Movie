@@ -8,8 +8,6 @@ import upchi.api.movie.premier.controllers.dtos.responses.GetPremierResponse;
 public interface IPremierService {
 
     GetPremierResponse create(PostPremierRequest request);
-    // Por Hacer:
-    // - Genera las interfaces de lo métodos para los servicios
 
     GetPremierResponse get(Long id);
 
@@ -19,5 +17,4 @@ public interface IPremierService {
 
     void delete(Long id);
 
-    // Recuerda que mínimo deberán haber 4 métodos (del protocolo HTTP)
 }

@@ -73,7 +73,7 @@ public class DirectorServiceImpl implements IDirectorService {
         director.setName(request.getName());
         director.setLastname(request.getLastname());
         director.setNickname(request.getNickname());
-        director.setNacionality(request.getNacionality());
+        director.setNationality(request.getNationality());
 
         return director;
 
@@ -82,7 +82,7 @@ public class DirectorServiceImpl implements IDirectorService {
     public Director updateRequestToDirector(Director director, UpdateDirectorRequest updated) {
 
         director.setAge(updated.getAge());
-        director.setNacionality(updated.getNacionality());
+        director.setNationality(updated.getNationality());
 
         return director;
 

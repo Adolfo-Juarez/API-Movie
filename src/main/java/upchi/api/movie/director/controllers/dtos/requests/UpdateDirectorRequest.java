@@ -6,7 +6,7 @@ import lombok.Setter;
 @Getter @Setter
 public class UpdateDirectorRequest {
     
-    private String nacionality;
+    private String nationality;
     private Integer age;
 
 }
