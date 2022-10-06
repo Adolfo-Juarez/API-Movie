@@ -11,7 +11,6 @@ import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
-import upchi.api.movie.pivots.FilmActor;
 import upchi.api.movie.pivots.FilmDirector;
 
 @Entity
