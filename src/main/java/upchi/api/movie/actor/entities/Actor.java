@@ -1,9 +1,12 @@
 package upchi.api.movie.actor.entities;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 import lombok.Getter;
 import lombok.Setter;
+import upchi.api.movie.pivots.FilmActor;
 
 @Entity
 @Table(name = "actors")
@@ -19,5 +22,8 @@ public class Actor {
     private String nickname;
     private Integer age;
     private String nacionality;
+
+    @OneToMany(mappedBy = "actor")
+    private List<FilmActor> filmActors;
 
 }

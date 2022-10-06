@@ -1,14 +1,19 @@
 package upchi.api.movie.film.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
+import upchi.api.movie.pivots.FilmActor;
+import upchi.api.movie.pivots.FilmDirector;
 
 @Entity
 @Table(name = "films")
@@ -27,4 +32,9 @@ public class Film {
     private String genre;
     private Integer year;
 
+    @OneToMany(mappedBy = "film")
+    private List<FilmDirector> filmDirectors;
+
+    @OneToMany(mappedBy = "film")
+    private List<FilmActor> filmActors;
 }
