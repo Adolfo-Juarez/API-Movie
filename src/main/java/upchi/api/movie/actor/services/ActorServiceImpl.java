@@ -19,9 +19,6 @@ public class ActorServiceImpl implements IActorService{
     @Autowired
     IActorRepository repository;
 
-    // Por Hacer:
-    // - Generar métodos en IActorService y sobre escribir acá
-
     @Override
     public GetActorResponse create(PostActorRequest request){
         Actor actor = from(request);
@@ -61,8 +58,6 @@ public class ActorServiceImpl implements IActorService{
         return repository.save(actor);
     }
 
-
-
     private Actor from (PostActorRequest request){
         Actor actor = new Actor();
         actor.setAge(request.getAge());
@@ -87,10 +82,5 @@ public class ActorServiceImpl implements IActorService{
         return repository.findById(id).map(this::from)
                 .orElseThrow(()-> new RuntimeException("Actor not found"));
     }
-
-
-
-
-
-    
+   
 }

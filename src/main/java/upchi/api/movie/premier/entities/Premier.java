@@ -23,5 +23,4 @@ public class Premier {
     private Date date;
     private String cine;
     
-
 }

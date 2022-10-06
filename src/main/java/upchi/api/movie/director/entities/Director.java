@@ -23,4 +23,5 @@ public class Director {
     private String nickname;
     private Integer age;
     private String nacionality;
+    
 }

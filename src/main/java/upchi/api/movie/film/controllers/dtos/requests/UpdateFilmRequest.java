@@ -9,5 +9,4 @@ public class UpdateFilmRequest {
     private String title;
     private Float duration;
     
-
 }

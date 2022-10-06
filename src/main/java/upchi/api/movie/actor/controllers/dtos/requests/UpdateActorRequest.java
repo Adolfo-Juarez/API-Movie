@@ -6,6 +6,8 @@ import lombok.Setter;
 
 @Setter @Getter
 public class UpdateActorRequest {
+
     private Integer age;
     private String nationality;
+    
 }

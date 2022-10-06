@@ -9,6 +9,7 @@ import lombok.Setter;
 @Table(name = "actors")
 @Setter @Getter
 public class Actor {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,7 +19,5 @@ public class Actor {
     private String nickname;
     private Integer age;
     private String nacionality;
-
-
 
 }

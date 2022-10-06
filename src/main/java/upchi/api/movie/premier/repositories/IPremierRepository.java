@@ -5,6 +5,4 @@ import upchi.api.movie.premier.entities.Premier;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 @Repository
-public interface IPremierRepository extends JpaRepository<Premier, Long>{
-
-}
+public interface IPremierRepository extends JpaRepository<Premier, Long>{}
