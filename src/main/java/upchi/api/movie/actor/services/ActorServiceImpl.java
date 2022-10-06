@@ -54,7 +54,7 @@ public class ActorServiceImpl implements IActorService{
 
     private Actor update(Actor actor, UpdateActorRequest request){
         actor.setAge(request.getAge());
-        actor.setNacionality(request.getNationality());
+        actor.setNationality(request.getNationality());
         return repository.save(actor);
     }
 
@@ -62,9 +62,9 @@ public class ActorServiceImpl implements IActorService{
         Actor actor = new Actor();
         actor.setAge(request.getAge());
         actor.setName(request.getName());
-        actor.setNacionality(request.getNacionality());
+        actor.setNationality(request.getNationality());
         actor.setNickname(request.getNickname());
-        actor.setLastName(request.getLastName());
+        actor.setLastName(request.getLastname());
         return actor;
     }
 
@@ -74,7 +74,7 @@ public class ActorServiceImpl implements IActorService{
         response.setAge(actor.getAge());
         response.setName(actor.getName());
         response.setLastName(actor.getLastName());
-        response.setNacionality(actor.getNacionality());
+        response.setNacionality(actor.getNationality());
         return response;
     }
 

@@ -7,9 +7,9 @@ import lombok.Setter;
 public class PostActorRequest {
     
     private String name;
-    private String lastName;
+    private String lastname;
     private String nickname;
     private Integer age;
-    private String nacionality;
+    private String nationality;
     
 }

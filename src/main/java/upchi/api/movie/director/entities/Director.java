@@ -26,7 +26,7 @@ public class Director {
     private String lastname;
     private String nickname;
     private Integer age;
-    private String nacionality;
+    private String nationality;
 
     @OneToMany(mappedBy = "director")
     private List<FilmDirector> filmDirectors;

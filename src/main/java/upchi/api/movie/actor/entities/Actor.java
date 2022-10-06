@@ -21,7 +21,7 @@ public class Actor {
     @Column(name = "pseudonimo")
     private String nickname;
     private Integer age;
-    private String nacionality;
+    private String nationality;
 
     @OneToMany(mappedBy = "actor")
     private List<FilmActor> filmActors;

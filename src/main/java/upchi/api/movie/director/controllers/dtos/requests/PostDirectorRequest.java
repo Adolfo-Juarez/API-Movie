@@ -10,6 +10,6 @@ public class PostDirectorRequest {
     private String lastname;
     private String nickname;
     private Integer age;
-    private String nacionality;
+    private String nationality;
 
 }
