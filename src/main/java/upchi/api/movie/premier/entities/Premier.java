@@ -23,7 +23,7 @@ public class Premier {
     private Long id;
 
     private Date date;
-    private String cine;
+    private String cinema;
 
     @OneToOne(mappedBy = "premier")
     private Film film;

@@ -41,7 +41,7 @@ public class PremierServiceImpl implements IPremierService{
     public GetPremierResponse update(Long id, PostPremierRequest request) {
         Premier premier = findAndEnsureExist(id);
         premier.setDate(request.getDate());
-        premier.setCine(request.getCine());
+        premier.setCinema(request.getCinema());
         return from(repository.save(premier));
     }
 
@@ -53,7 +53,7 @@ public class PremierServiceImpl implements IPremierService{
     private Premier from(PostPremierRequest request){
         Premier premier = new Premier();
         premier.setDate(request.getDate());
-        premier.setCine(request.getCine());
+        premier.setCinema(request.getCinema());
         return premier;
     }
 
@@ -61,7 +61,7 @@ public class PremierServiceImpl implements IPremierService{
         GetPremierResponse response = new GetPremierResponse();
         response.setId(premier.getId());
         response.setDate(premier.getDate());
-        response.setCine(premier.getCine());
+        response.setCinema(premier.getCinema());
         return response;
     }
 

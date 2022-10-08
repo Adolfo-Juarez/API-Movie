@@ -10,6 +10,6 @@ public class GetPremierResponse {
 
     private Long id;
     private Date date;
-    private String cine;
+    private String cinema;
 
 }

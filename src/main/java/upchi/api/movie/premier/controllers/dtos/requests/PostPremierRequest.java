@@ -9,6 +9,6 @@ import lombok.Setter;
 public class PostPremierRequest {
    
     private Date date;
-    private String cine;
+    private String cinema;
     
 }
