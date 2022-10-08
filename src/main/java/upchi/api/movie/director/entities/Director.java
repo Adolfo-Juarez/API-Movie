@@ -1,17 +1,13 @@
 package upchi.api.movie.director.entities;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
-import upchi.api.movie.pivots.FilmDirector;
 
 @Entity
 @Table(name = "directors")
@@ -28,7 +24,5 @@ public class Director {
     private Integer age;
     private String nationality;
 
-    @OneToMany(mappedBy = "director")
-    private List<FilmDirector> filmDirectors;
     
 }

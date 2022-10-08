@@ -16,7 +16,6 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 import upchi.api.movie.pivots.FilmActor;
-import upchi.api.movie.pivots.FilmDirector;
 import upchi.api.movie.premier.entities.Premier;
 import upchi.api.movie.studio.entities.Studio;
 
@@ -37,9 +36,6 @@ public class Film {
     private Float duration;
     private String genre;
     private Integer year;
-
-    @OneToMany(mappedBy = "film")
-    private List<FilmDirector> filmDirectors;
 
     @OneToMany(mappedBy = "film")
     private List<FilmActor> filmActors;
