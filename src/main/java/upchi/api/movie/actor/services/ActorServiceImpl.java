@@ -64,7 +64,7 @@ public class ActorServiceImpl implements IActorService{
         actor.setName(request.getName());
         actor.setNationality(request.getNationality());
         actor.setNickname(request.getNickname());
-        actor.setLastName(request.getLastname());
+        actor.setLastname(request.getLastname());
         return actor;
     }
 
@@ -73,7 +73,7 @@ public class ActorServiceImpl implements IActorService{
         response.setId(actor.getId());
         response.setAge(actor.getAge());
         response.setName(actor.getName());
-        response.setLastName(actor.getLastName());
+        response.setLastname(actor.getLastname());
         response.setNacionality(actor.getNationality());
         return response;
     }

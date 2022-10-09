@@ -17,8 +17,7 @@ public class Actor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String lastName;
-    @Column(name = "pseudonimo")
+    private String lastname;
     private String nickname;
     private Integer age;
     private String nationality;

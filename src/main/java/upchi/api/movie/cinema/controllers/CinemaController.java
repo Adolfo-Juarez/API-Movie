@@ -1,11 +1,14 @@
 package upchi.api.movie.cinema.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import upchi.api.movie.cinema.controllers.dtos.requests.PostCinemaRequest;
+import upchi.api.movie.cinema.controllers.dtos.requests.UpdateCinemaRequest;
+import upchi.api.movie.cinema.controllers.dtos.responses.GetCinemaResponse;
 import upchi.api.movie.cinema.services.interfaces.ICinemaService;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("cinema")
@@ -14,16 +17,27 @@ public class CinemaController {
     @Autowired
     ICinemaService service;
 
-    // Por Hacer:
-    // - Agregar las rutas correspondientes para las peticiones HTTP
-    //     - GET, POST, UPDATE y DELETE
-
-    // La interfaz del servicio ya están importados
-
-    // Eliminar el método que viene por defecto  HelloWorld
+    @GetMapping("{id}")
+    public GetCinemaResponse get(@PathVariable Long id){
+        return service.getById(id);
+    }
     @GetMapping
-    public String HelloWorld() {
-        return "Hello World, we're in Cinema";
+    public List<GetCinemaResponse> list(){
+        return service.list();
     }
 
+    @DeleteMapping("{id}")
+    public void delete(@PathVariable Long id){
+        service.delete(id);
+    }
+
+    @PostMapping
+    public GetCinemaResponse create(@RequestBody PostCinemaRequest request){
+        return service.create(request);
+    }
+
+    @PutMapping("{id}")
+    public GetCinemaResponse update(@PathVariable Long id, @RequestBody UpdateCinemaRequest request){
+        return service.update(id, request);
+    }
 }
