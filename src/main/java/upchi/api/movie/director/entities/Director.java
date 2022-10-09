@@ -4,10 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
+import upchi.api.movie.film.entities.Film;
 
 @Entity
 @Table(name = "directors")
@@ -24,5 +26,7 @@ public class Director {
     private Integer age;
     private String nationality;
 
+    @OneToOne(mappedBy = "director")
+    private Film film;
     
 }

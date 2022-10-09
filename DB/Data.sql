@@ -1,0 +1,146 @@
+-- Este script incrusta información a la tabla
+
+-- Información recopilada de: https://www.imdb.com/chart/top/
+
+-- INSERCCIÓN a Film
+INSERT INTO api_movie.films(title, duration, year, genre, img_route) VALUES
+(
+    "The Shawshank Redemption",
+    142,
+    1994,
+    "Drama",
+    "the-shawshank-redemption-API-Movie.jpg"
+),
+(
+    "The Godfather",
+    175,
+    1972,
+    "Crime",
+    "the-godfather-API-Movie.jpg"
+),
+(
+    "The Dark Knight",
+    152,
+    2008,
+    "Action",
+    "the-dark-knight-API-Movie.jpg"
+),
+(
+    "The Godfather Part II",
+    202,
+    1974,
+    "Crime",
+    "the-godfather-part-II-API-Movie.jpg"
+),
+(
+    "12 Angry Men",
+    96,
+    1957,
+    "Crime",
+    "12-angry-men-API-Movie.jpg"
+),
+(
+    "Schindler's List",
+    195,
+    1993,
+    "Biography",
+    "schindlers-list-API-Movie.jpg"
+),
+(
+    "The Lord of the Rings: The Return of the King",
+    201,
+    2003,
+    "Adventure",
+    "the-lord-of-the-rings-the-return-of-the-king-API-Movie.jpg"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+),
+(
+    "Pelicula1",
+    60,
+    2022,
+    "Terror",
+    "http://localhost:8080/films"
+);

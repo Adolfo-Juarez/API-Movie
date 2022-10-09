@@ -15,6 +15,7 @@ import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
+import upchi.api.movie.director.entities.Director;
 import upchi.api.movie.pivots.FilmActor;
 import upchi.api.movie.premier.entities.Premier;
 import upchi.api.movie.studio.entities.Studio;
@@ -43,6 +44,10 @@ public class Film {
     @OneToOne
     @JoinColumn(name = "premier_id", referencedColumnName = "id")
     private Premier premier;
+
+    @OneToOne
+    @JoinColumn(name="director_id", referencedColumnName = "id")
+    private Director director;
 
     @ManyToOne
     private Studio studio;
