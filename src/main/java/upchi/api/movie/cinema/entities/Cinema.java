@@ -1,13 +1,12 @@
 package upchi.api.movie.cinema.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.Getter;
 import lombok.Setter;
+import upchi.api.movie.pivots.CinemaPremiere;
+
+import java.util.List;
 
 @Entity
 @Table(name = "cinemas")
@@ -18,4 +17,7 @@ public class Cinema {
     private Long id;
     private String location;
     private String name;
+
+    @OneToMany(mappedBy = "cinema")
+    private List<CinemaPremiere> cinemaPremieres;
 }
