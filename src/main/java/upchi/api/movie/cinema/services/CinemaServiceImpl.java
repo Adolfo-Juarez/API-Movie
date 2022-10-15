@@ -1,21 +1,17 @@
 package upchi.api.movie.cinema.services;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import upchi.api.movie.actor.controllers.dtos.requests.PostActorRequest;
-import upchi.api.movie.actor.controllers.dtos.requests.UpdateActorRequest;
-import upchi.api.movie.actor.controllers.dtos.responses.GetActorResponse;
-import upchi.api.movie.actor.entities.Actor;
 import upchi.api.movie.cinema.controllers.dtos.requests.PostCinemaRequest;
 import upchi.api.movie.cinema.controllers.dtos.requests.UpdateCinemaRequest;
 import upchi.api.movie.cinema.controllers.dtos.responses.GetCinemaResponse;
 import upchi.api.movie.cinema.entities.Cinema;
 import upchi.api.movie.cinema.repositories.ICinemaRepository;
 import upchi.api.movie.cinema.services.interfaces.ICinemaService;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class CinemaServiceImpl implements ICinemaService{

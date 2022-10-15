@@ -52,4 +52,4 @@ El desarrollo de este proyecto se dividirá por fases, y evolucionará según lo
 ![Modelo entidad relación](info-img/Entities.png)
 ### Modelo final 
 Renderizado por PhpMyAdmin
-![Modelo entidad relacion from PhpMyAdmin](info-img/api_movie.svg)
+![Modelo entidad relacion from PhpMyAdmin](info-img/api_movie.png)
