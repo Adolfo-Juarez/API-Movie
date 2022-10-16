@@ -45,8 +45,7 @@ public class Film {
     @JoinColumn(name = "premier_id", referencedColumnName = "id")
     private Premier premier;
 
-    @OneToOne
-    @JoinColumn(name="director_id", referencedColumnName = "id")
+    @ManyToOne
     private Director director;
 
     @ManyToOne
