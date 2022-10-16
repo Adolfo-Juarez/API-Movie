@@ -1,17 +1,15 @@
 package upchi.api.movie.premier.entities;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.*;
 
 import lombok.Getter;
 import lombok.Setter;
 import upchi.api.movie.film.entities.Film;
-import upchi.api.movie.pivots.CinemaPremiere;
 
 @Entity
-@Table(name = "premiers")
+@Table(name = "premieres")
 @Setter @Getter
 public class Premier {
 
@@ -25,6 +23,4 @@ public class Premier {
     @OneToOne(mappedBy = "premier")
     private Film film;
 
-    @OneToMany(mappedBy = "premier")
-    private List<CinemaPremiere> cinemaPremieres;
 }
