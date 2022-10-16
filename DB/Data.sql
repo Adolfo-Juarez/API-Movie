@@ -242,7 +242,7 @@ INSERT INTO api_movie.studios (headquarters, name) VALUES
 
 -- Insercciones en PREMIERES
 
-INSERT INTO premieres (cinema, date) VALUES 
+INSERT INTO api_movie.premieres (cinema, date) VALUES 
 (
     'Ohio Theatre, 138 Park Ave., W., Mansfield, Ohio', 
     '1994-09-23 00:00:00'
@@ -388,7 +388,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
 );
 
 -- Relaciones films-actors
-INSERT INTO films_actors (actor_id, film_id) VALUES
+INSERT INTO api_movie.films_actors (actor_id, film_id) VALUES
 (
     1,
     1
