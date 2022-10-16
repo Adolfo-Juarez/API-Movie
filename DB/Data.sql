@@ -1,83 +1,11 @@
--- Este script incrusta información a la tabla
+-- Este script incrusta información a la tabla para tener información
+-- por defecto :)
 
 -- Información recopilada de: https://www.imdb.com/chart/top/
 
 -- ** IMPORTANTE **
 -- Recuerda tener las tablas de la base de datos vacias antes de 
 -- ejecutar este script SQL
-
--- INSERCCIÓN a Film
-INSERT INTO api_movie.films(title, duration, year, genre, img_route) VALUES
-(
-    "The Shawshank Redemption",
-    142,
-    1994,
-    "Drama",
-    "the-shawshank-redemption-API-Movie.jpg"
-),
-(
-    "The Godfather",
-    175,
-    1972,
-    "Crime",
-    "the-godfather-API-Movie.jpg"
-),
-(
-    "The Dark Knight",
-    152,
-    2008,
-    "Action",
-    "the-dark-knight-API-Movie.jpg"
-),
-(
-    "The Godfather Part II",
-    202,
-    1974,
-    "Crime",
-    "the-godfather-part-II-API-Movie.jpg"
-),
-(
-    "12 Angry Men",
-    96,
-    1957,
-    "Crime",
-    "12-angry-men-API-Movie.jpg"
-),
-(
-    "Schindler's List",
-    195,
-    1993,
-    "Biography",
-    "schindlers-list-API-Movie.jpg"
-),
-(
-    "The Lord of the Rings: The Return of the King",
-    201,
-    2003,
-    "Adventure",
-    "the-lord-of-the-rings-the-return-of-the-king-API-Movie.jpg"
-),
-(
-    "Pulp Fiction",
-    154,
-    1994,
-    "Crime",
-    "pulp-fiction-API-Movie.jpg"
-),
-(
-    "The Lord of the Rings: The Fellowship of the Ring",
-    178,
-    2001,
-    "Action",
-    "The Lord of the Rings: The Fellowship of the Ring"
-),
-(
-    "The Good, the Bad and the Ugly",
-    178,
-    1966,
-    "Adventure",
-    "the-good-the-bad-and-the-ugly-API-Movie.jpg"
-);
 
 -- INSERCCIÓN a Director
 
@@ -130,6 +58,20 @@ INSERT INTO api_movie.directors(name, lastname, nickname, age, nationality) VALU
     "Tarantino",
     59,
     "American"
+),
+(
+    "Steven Allan",
+    "Spielberg",
+    "Steven Spielberg",
+    75,
+    "American"
+),
+(
+    "Sergio",
+    "Leone",
+    "Sergio Leone",
+    60,
+    "Italian"
 );
 
 -- INSERCIÓN a Actor
@@ -152,7 +94,7 @@ INSERT INTO api_movie.actors (name, lastname, nickname, age, nationality) VALUES
 (
     "Alfredo James",
     "Pancino",
-    "Pacino",
+    "Alpacino",
     82,
     "American"
 ),
@@ -227,17 +169,17 @@ INSERT INTO api_movie.actors (name, lastname, nickname, age, nationality) VALUES
     "New Zealander"
 ),
 (
-    "Quentin Jerome",
-    "Tarantino",
-    "Quentin Tarantino",
-    59,
+    "John Joseph",
+    "Travolta",
+    "John Travolta",
+    68,
     "American"
 ),
 (
-    "nombre",
-    "lastname",
-    "nickname",
-    12,
+    "Uma Karuna",
+    "Thurman",
+    "Uma Thurman",
+    52,
     "American"
 ),
 (
@@ -340,4 +282,190 @@ INSERT INTO premieres (cinema, date) VALUES
 (
     'Cinnema in Italy', 
     '1966-12-23 00:00:00'
+);
+
+-- INSERCCIÓN a Film
+INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id, premier_id, studio_id) VALUES
+(
+    "The Shawshank Redemption",
+    142,
+    1994,
+    "Drama",
+    "the-shawshank-redemption-API-Movie.jpg",
+    1,
+    1,
+    1
+),
+(
+    "The Godfather",
+    175,
+    1972,
+    "Crime",
+    "the-godfather-API-Movie.jpg",
+    2,
+    2,
+    2
+),
+(
+    "The Dark Knight",
+    152,
+    2008,
+    "Action",
+    "the-dark-knight-API-Movie.jpg",
+    3,
+    3,
+    3
+),
+(
+    "The Godfather Part II",
+    202,
+    1974,
+    "Crime",
+    "the-godfather-part-II-API-Movie.jpg",
+    2,
+    4,
+    2
+),
+(
+    "12 Angry Men",
+    96,
+    1957,
+    "Crime",
+    "12-angry-men-API-Movie.jpg",
+    4,
+    5,
+    4
+),
+(
+    "Schindler's List",
+    195,
+    1993,
+    "Biography",
+    "schindlers-list-API-Movie.jpg",
+    8,
+    6,
+    5
+),
+(
+    "The Lord of the Rings: The Return of the King",
+    201,
+    2003,
+    "Adventure",
+    "the-lord-of-the-rings-the-return-of-the-king-API-Movie.jpg",
+    6,
+    7,
+    6
+),
+(
+    "Pulp Fiction",
+    154,
+    1994,
+    "Crime",
+    "pulp-fiction-API-Movie.jpg",
+    7,
+    8,
+    7
+),
+(
+    "The Lord of the Rings: The Fellowship of the Ring",
+    178,
+    2001,
+    "Action",
+    "The Lord of the Rings: The Fellowship of the Ring",
+    6,
+    9,
+    6
+),
+(
+    "The Good, the Bad and the Ugly",
+    178,
+    1966,
+    "Adventure",
+    "the-good-the-bad-and-the-ugly-API-Movie.jpg",
+    9,
+    10,
+    8
+);
+
+-- Relaciones films-actors
+INSERT INTO films_actors (actor_id, film_id) VALUES
+(
+    1,
+    1
+),
+(
+    2,
+    1
+),
+(
+    3,
+    2
+),
+(
+    4,
+    2
+),
+(
+    6,
+    3
+),
+(
+    5,
+    3
+),
+(
+    3,
+    4
+),
+(
+    7,
+    4
+),
+(
+    8,
+    5
+),
+(
+    9,
+    5
+),
+(
+    10,
+    6
+),
+(
+    11,
+    6
+),
+(
+    12,
+    7
+),
+(
+    13,
+    7
+),
+(
+    14,
+    8
+),
+(
+    15,
+    8
+),
+(
+    12,
+    9
+),
+(
+    16,
+    9
+),
+(
+    17,
+    10
+),
+(
+    18,
+    10
 );
