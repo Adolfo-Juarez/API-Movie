@@ -9,17 +9,16 @@ Este proyecto presentará información de películas, los actores, productores, 
 ## Distribución de trabajo
 El proyecto se dividirá por entidad, de la siguiente manera:
 
-+ **Adolfo**: Films y Directors
++ **Adolfo**: Films
 + **Leonardo**: Actors
 + **Yadira**: Premiers
 + **Isaí**: Studios
++ **Diego**: Directors
 
 
-Cada entidad está dentro de un paquete con sus respectiva carpeta de Controladores, DTOS, Entidad, Servicios, Interfaces y Repositorios.
+La configuracion por defecto está hecha para trabajar dentro de un entorno local, puedes modificar esto en **application.propierties**.
 
-Cada entidad ya contiene código generado para tener un inicio rápido de sus actividades.
-
-La configuración del proyecto está hecha para trabajar con **Java 17**  y en un entorno local, por lo que es indispensable tener activo sus sistema de gestión de base de datos, como **Xampp** y tener un base de datos creada con el nombre de **api_movie**. Puedes verificar estas configuraciones dentro de **aplication.propierties**.
+**IMPORTANTE**: Recuerda no compartir credenciales en git. Hemos modificado el archivo ./gitignore para omitir el archivo que configura el acceso a la base de datos remota, pero verifica tu stage antes de cualquier push con `git status`.
 
 El desarrollo de este proyecto se dividirá por fases, y evolucionará según los temas que veamos en clases.
 
@@ -42,7 +41,7 @@ El desarrollo de este proyecto se dividirá por fases, y evolucionará según lo
 - Configurar los servicios y proyecciones de las uniones
 - Habilitar los end-points para hacer las peticiones
 
-### Fase 4
+### Fase 4 - FINALIZADO
 - Migrar al entorno de los servicios de AWS.
 
 ---------------------
