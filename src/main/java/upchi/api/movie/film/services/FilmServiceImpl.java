@@ -56,6 +56,24 @@ public class FilmServiceImpl implements IFilmService {
         return filmToGetResponse(repository.save(updateRequestToFilm(request, film)));
     }
 
+    @Override
+    public Film findOneAndEnsureExist(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Film is not available"));
+    }
+
+    @Override
+    public Film save(Film film) {
+        return repository.save(film);
+    }
+
+    @Override
+    public void updateFilmCover(String profilePictureUrl, Long idUser) {
+        Film cover = findOneAndEnsureExist(idUser);
+        cover.setImage(profilePictureUrl);
+        repository.save(cover);
+    }
+
     /*** Métodos de conversión de datos ***/
 
     private Film postRequestToFilm(PostFilmRequest request) {

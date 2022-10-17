@@ -6,6 +6,7 @@ import upchi.api.movie.film.controllers.dtos.requests.PostFilmRequest;
 import upchi.api.movie.film.controllers.dtos.requests.UpdateFilmRequest;
 import upchi.api.movie.film.controllers.dtos.responses.GetFilmResponse;
 import upchi.api.movie.film.controllers.dtos.responses.PostFilmResponse;
+import upchi.api.movie.film.entities.Film;
 
 public interface IFilmService {
 
@@ -17,5 +18,11 @@ public interface IFilmService {
     public void delete(Long id);
 
     public GetFilmResponse update(Long id, UpdateFilmRequest request);
+
+    public Film findOneAndEnsureExist(Long id);
+
+    public Film save(Film film);
+
+    public void updateFilmCover(String profilePictureUrl, Long idUser);
 
 }
