@@ -7,6 +7,65 @@
 -- Recuerda tener las tablas de la base de datos vacias antes de 
 -- ejecutar este script SQL
 
+
+-- INSERCCIÓN a Producer
+
+INSERT INTO api_movie.producers(name, lastname, age, nationality) VALUES
+(
+    "David",
+    "O. Selznick",
+    0,
+    "American"
+),
+(
+    "James",
+    "L. Brooks",
+    82,
+    "American"
+),
+(
+    "Steven",
+    "Allan Spielberg",
+    75,
+    "American"
+),
+(
+    "Sidney",
+    "Lumet",
+    0,
+    "American"
+),
+(
+    "Aaron",
+    "Spelling",
+    0,
+    "American"
+),
+(
+    "Lawrence",
+    "Bender",
+    65,
+    "American"
+),
+(
+    "Kevin",
+    "Feige",
+    49,
+    "American"
+),
+(
+    "Clint",
+    "Eastwood ",
+    92,
+    "American"
+),
+(
+    "Francis",
+    "Ford Coppola",
+    83,
+    "American"
+);
+
 -- INSERCCIÓN a Director
 
 INSERT INTO api_movie.directors(name, lastname, nickname, age, nationality) VALUES 
@@ -285,7 +344,7 @@ INSERT INTO api_movie.premieres (cinema, date) VALUES
 );
 
 -- INSERCCIÓN a Film
-INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id, premier_id, studio_id) VALUES
+INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id, premier_id, producer_id, studio_id) VALUES
 (
     "The Shawshank Redemption",
     142,
@@ -294,6 +353,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     "the-shawshank-redemption-API-Movie.jpg",
     1,
     1,
+    3,
     1
 ),
 (
@@ -304,6 +364,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     "the-godfather-API-Movie.jpg",
     2,
     2,
+    9,
     2
 ),
 (
@@ -314,6 +375,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     "the-dark-knight-API-Movie.jpg",
     3,
     3,
+    1,
     3
 ),
 (
@@ -324,6 +386,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     "the-godfather-part-II-API-Movie.jpg",
     2,
     4,
+    2,
     2
 ),
 (
@@ -334,6 +397,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     "12-angry-men-API-Movie.jpg",
     4,
     5,
+    7,
     4
 ),
 (
@@ -344,6 +408,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     "schindlers-list-API-Movie.jpg",
     8,
     6,
+    4,
     5
 ),
 (
@@ -354,6 +419,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     "the-lord-of-the-rings-the-return-of-the-king-API-Movie.jpg",
     6,
     7,
+    8,
     6
 ),
 (
@@ -364,6 +430,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     "pulp-fiction-API-Movie.jpg",
     7,
     8,
+    5,
     7
 ),
 (
@@ -374,6 +441,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     "The Lord of the Rings: The Fellowship of the Ring",
     6,
     9,
+    1,
     6
 ),
 (
@@ -384,6 +452,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     "the-good-the-bad-and-the-ugly-API-Movie.jpg",
     9,
     10,
+    6,
     8
 );
 

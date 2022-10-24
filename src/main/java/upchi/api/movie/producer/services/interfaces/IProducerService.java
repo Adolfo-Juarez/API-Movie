@@ -1,8 +1,18 @@
 package upchi.api.movie.producer.services.interfaces;
 
-public interface IProducerService {
-    // Por Hacer:
-    // - Genera las interfaces de lo métodos para los servicios
+import java.util.List;
+import upchi.api.movie.producer.controllers.dtos.requests.PostProducerRequest;
+import upchi.api.movie.producer.controllers.dtos.requests.UpdateProducerRequest;
+import upchi.api.movie.producer.controllers.dtos.responses.GetProducerResponse;
 
-    // Recuerda que mínimo deberán haber 4 métodos (del protocolo HTTP)
+public interface IProducerService {
+    public GetProducerResponse create (PostProducerRequest request);
+
+    public List<GetProducerResponse> list();
+
+    public GetProducerResponse get(Long id);
+
+    public GetProducerResponse update(Long id, UpdateProducerRequest request);
+
+    public void delete(Long id);
 }

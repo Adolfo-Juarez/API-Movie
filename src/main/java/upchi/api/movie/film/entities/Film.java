@@ -16,6 +16,7 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 import upchi.api.movie.director.entities.Director;
+import upchi.api.movie.producer.entities.Producer;
 import upchi.api.movie.pivots.FilmActor;
 import upchi.api.movie.premier.entities.Premier;
 import upchi.api.movie.studio.entities.Studio;
@@ -47,6 +48,9 @@ public class Film {
 
     @ManyToOne
     private Director director;
+
+    @ManyToOne
+    private Producer producer;
 
     @ManyToOne
     private Studio studio;
