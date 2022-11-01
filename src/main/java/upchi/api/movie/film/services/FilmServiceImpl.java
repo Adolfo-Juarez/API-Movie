@@ -106,7 +106,7 @@ public class FilmServiceImpl implements IFilmService {
         response.setId(film.getId());
         response.setTitle(film.getTitle());
         response.setDuration(film.getDuration());
-        response.setImg(film.getImage());
+        response.setImage(film.getId());
 
         return response;
 

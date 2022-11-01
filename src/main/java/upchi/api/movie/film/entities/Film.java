@@ -2,7 +2,6 @@ package upchi.api.movie.film.entities;
 
 import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +16,7 @@ import lombok.Getter;
 import lombok.Setter;
 import upchi.api.movie.director.entities.Director;
 import upchi.api.movie.producer.entities.Producer;
+import upchi.api.movie.image.entities.Image;
 import upchi.api.movie.pivots.FilmActor;
 import upchi.api.movie.premier.entities.Premier;
 import upchi.api.movie.studio.entities.Studio;
@@ -31,8 +31,9 @@ public class Film {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "img_route")
-    private String image;
+    @ManyToOne
+    @JoinColumn(name = "image_id", referencedColumnName = "id")
+    private Image image;
 
     private String title;
     private Float duration;
@@ -54,5 +55,4 @@ public class Film {
 
     @ManyToOne
     private Studio studio;
-
 }

@@ -19,10 +19,7 @@ public interface IFilmService {
 
     public GetFilmResponse update(Long id, UpdateFilmRequest request);
 
-    public Film findOneAndEnsureExist(Long id);
-
     public Film save(Film film);
 
     public void updateFilmCover(String profilePictureUrl, Long idUser);
-
 }

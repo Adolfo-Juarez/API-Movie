@@ -8,7 +8,6 @@ public class GetFilmResponse {
 
     private Long id;
     private String title;
-    private String img;
+    private Long image;
     private Float duration;
-
 }
