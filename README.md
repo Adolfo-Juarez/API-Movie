@@ -13,7 +13,7 @@ El proyecto se dividirá por entidad, de la siguiente manera:
 + **Leonardo**: Actors
 + **Yadira**: Premiers
 + **Isaí**: Studios
-+ **Diego**: Directors
++ **Diego**: Producers
 
 
 La configuracion por defecto está hecha para trabajar dentro de un entorno local, puedes modificar esto en **application.propierties**.
