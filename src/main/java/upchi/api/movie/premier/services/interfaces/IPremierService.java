@@ -12,7 +12,7 @@ public interface IPremierService {
     GetPremierResponse get(Long id);
 
     List<GetPremierResponse> list();
-
+ 
     GetPremierResponse update(Long id, PostPremierRequest request);
 
     void delete(Long id);
