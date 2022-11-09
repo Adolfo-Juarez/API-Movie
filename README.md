@@ -50,5 +50,5 @@ El desarrollo de este proyecto se dividirá por fases, y evolucionará según lo
 ### Modelo previsto
 ![Modelo entidad relación](info-img/Entities.png)
 ### Modelo final 
-Renderizado por PhpMyAdmin
+Renderizado por MySQL Workbench
 ![Modelo entidad relacion from PhpMyAdmin](info-img/entity-api-movie.png)
