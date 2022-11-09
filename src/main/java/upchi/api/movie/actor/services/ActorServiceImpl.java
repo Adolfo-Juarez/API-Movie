@@ -82,5 +82,11 @@ public class ActorServiceImpl implements IActorService{
         return repository.findById(id).map(this::from)
                 .orElseThrow(()-> new RuntimeException("Actor not found"));
     }
+
+    @Override
+    public Actor findOneAndEnsureExist(Long id) {
+        return repository.findById(id)
+        .orElseThrow(()-> new RuntimeException("The actor does not exist"));
+    }
    
 }

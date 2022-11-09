@@ -48,4 +48,9 @@ public class CoverServiceImpl implements ICoverService{
                 .orElseThrow(() -> new RuntimeException("Film is not available"));
     }
 
+    @Override
+    public Cover saveAsIs(Cover cover){
+        return repository.save(cover);
+    }
+
 }

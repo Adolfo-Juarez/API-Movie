@@ -16,7 +16,7 @@ import lombok.Getter;
 import lombok.Setter;
 import upchi.api.movie.cover.entities.Cover;
 import upchi.api.movie.director.entities.Director;
-import upchi.api.movie.pivots.FilmActor;
+import upchi.api.movie.pivots.entities.FilmActor;
 import upchi.api.movie.producer.entities.Producer;
 import upchi.api.movie.studio.entities.Studio;
 

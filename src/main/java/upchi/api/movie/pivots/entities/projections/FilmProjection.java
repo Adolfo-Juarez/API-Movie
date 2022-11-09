@@ -1,4 +1,4 @@
-package upchi.api.movie.film.entities.projections;
+package upchi.api.movie.pivots.entities.projections;
 
 public interface FilmProjection {
     

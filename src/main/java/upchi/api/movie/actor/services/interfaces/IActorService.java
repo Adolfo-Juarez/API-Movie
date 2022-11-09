@@ -3,6 +3,7 @@ package upchi.api.movie.actor.services.interfaces;
 import upchi.api.movie.actor.controllers.dtos.requests.PostActorRequest;
 import upchi.api.movie.actor.controllers.dtos.requests.UpdateActorRequest;
 import upchi.api.movie.actor.controllers.dtos.responses.GetActorResponse;
+import upchi.api.movie.actor.entities.Actor;
 
 import java.util.List;
 
@@ -23,5 +24,7 @@ public interface IActorService {
 
     //Método para obtener un actor por medio de un id
     public GetActorResponse getById(Long id);
+
+    public Actor findOneAndEnsureExist(Long id);
 
 }

@@ -344,7 +344,6 @@ INSERT INTO u554002883_api_movie.studios (headquarters, name) VALUES
 -- );
 
 INSERT INTO u554002883_api_movie.covers(route) VALUES 
-("No route given"),
 ("https://api-movies.s3.us-east-1.amazonaws.com/the-shawshank-redemption-API-Movie.jpg"),
 ("https://api-movies.s3.us-east-1.amazonaws.com/the-godfather-API-Movie.jpg"),
 ("https://api-movies.s3.us-east-1.amazonaws.com/the-dark-knight-API-Movie.jpg"),
@@ -363,7 +362,7 @@ INSERT INTO u554002883_api_movie.films(title, duration, year, genre, cover_id, d
     142,
     1994,
     "Drama",
-    2,
+    1,
     1,
     3,
     1
@@ -373,7 +372,7 @@ INSERT INTO u554002883_api_movie.films(title, duration, year, genre, cover_id, d
     175,
     1972,
     "Crime",
-    3,
+    2,
     2,
     9,
     2
@@ -383,7 +382,7 @@ INSERT INTO u554002883_api_movie.films(title, duration, year, genre, cover_id, d
     152,
     2008,
     "Action",
-    4,
+    3,
     3,
     1,
     3
@@ -393,7 +392,7 @@ INSERT INTO u554002883_api_movie.films(title, duration, year, genre, cover_id, d
     202,
     1974,
     "Crime",
-    5,
+    4,
     2,
     2,
     2
@@ -403,7 +402,7 @@ INSERT INTO u554002883_api_movie.films(title, duration, year, genre, cover_id, d
     96,
     1957,
     "Crime",
-    6,
+    5,
     4,
     7,
     4
@@ -413,7 +412,7 @@ INSERT INTO u554002883_api_movie.films(title, duration, year, genre, cover_id, d
     195,
     1993,
     "Biography",
-    7,
+    6,
     8,
     4,
     5
@@ -423,7 +422,7 @@ INSERT INTO u554002883_api_movie.films(title, duration, year, genre, cover_id, d
     201,
     2003,
     "Adventure",
-    8,
+    7,
     6,
     8,
     6
@@ -433,7 +432,7 @@ INSERT INTO u554002883_api_movie.films(title, duration, year, genre, cover_id, d
     154,
     1994,
     "Crime",
-    9,
+    8,
     7,
     5,
     7
@@ -443,7 +442,7 @@ INSERT INTO u554002883_api_movie.films(title, duration, year, genre, cover_id, d
     178,
     2001,
     "Action",
-    10,
+    9,
     6,
     1,
     6
@@ -453,7 +452,7 @@ INSERT INTO u554002883_api_movie.films(title, duration, year, genre, cover_id, d
     178,
     1966,
     "Adventure",
-    11,
+    10,
     9,
     6,
     8

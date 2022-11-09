@@ -1,4 +1,4 @@
-package upchi.api.movie.film.repositories;
+package upchi.api.movie.pivots.repositories;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import upchi.api.movie.actor.entities.projections.ActorProjection;
-import upchi.api.movie.film.entities.projections.FilmProjection;
-import upchi.api.movie.pivots.FilmActor;
+import upchi.api.movie.pivots.entities.FilmActor;
+import upchi.api.movie.pivots.entities.projections.FilmProjection;
 
 @Repository
 public interface IFilmActorRepository extends JpaRepository<FilmActor, Long>{

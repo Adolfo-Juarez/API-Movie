@@ -1,4 +1,4 @@
-package upchi.api.movie.pivots;
+package upchi.api.movie.pivots.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

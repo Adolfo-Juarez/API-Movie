@@ -6,4 +6,5 @@ public interface ICoverService {
     public void updateFilmCover(String coverPicturesUrl, Long id);
     public String getRouteById(Long id);
     public Cover findOneAndEnsureExist(Long id);
+    public Cover saveAsIs(Cover cover);
 }

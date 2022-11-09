@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 import lombok.Getter;
 import lombok.Setter;
-import upchi.api.movie.pivots.FilmActor;
+import upchi.api.movie.pivots.entities.FilmActor;
 
 @Entity
 @Table(name = "actors")
