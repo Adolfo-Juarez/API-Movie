@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import upchi.api.movie.cover.services.interfaces.ICoverService;
 import upchi.api.movie.film.controllers.dtos.requests.PostFilmRequest;
 import upchi.api.movie.film.controllers.dtos.requests.UpdateFilmRequest;
 import upchi.api.movie.film.controllers.dtos.responses.GetFilmResponse;
@@ -19,6 +20,9 @@ public class FilmServiceImpl implements IFilmService {
 
     @Autowired
     IFilmRepository repository;
+
+    @Autowired
+    ICoverService coverService;
 
     @Override
     public List<GetFilmResponse> list() {
@@ -67,13 +71,6 @@ public class FilmServiceImpl implements IFilmService {
         return repository.save(film);
     }
 
-    @Override
-    public void updateFilmCover(String profilePictureUrl, Long idUser) {
-        Film cover = findOneAndEnsureExist(idUser);
-        cover.setImage(profilePictureUrl);
-        repository.save(cover);
-    }
-
     /*** Métodos de conversión de datos ***/
 
     private Film postRequestToFilm(PostFilmRequest request) {
@@ -106,7 +103,7 @@ public class FilmServiceImpl implements IFilmService {
         response.setId(film.getId());
         response.setTitle(film.getTitle());
         response.setDuration(film.getDuration());
-        response.setImg(film.getImage());
+        response.setImg(coverService.getRouteById(response.getId()));
 
         return response;
 

@@ -1,4 +1,4 @@
-package upchi.api.movie.film.services.interfaces;
+package upchi.api.movie.cover.services.interfaces;
 
 import org.springframework.web.multipart.MultipartFile;
 

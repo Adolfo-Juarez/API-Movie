@@ -1,4 +1,4 @@
-package upchi.api.movie.film.controllers;
+package upchi.api.movie.cover.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import upchi.api.movie.film.services.CoverImageServiceImpl;
+import upchi.api.movie.cover.services.CoverImageServiceImpl;
 
 @RestController
 @RequestMapping("cover")

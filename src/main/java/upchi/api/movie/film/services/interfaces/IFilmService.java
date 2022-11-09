@@ -23,6 +23,4 @@ public interface IFilmService {
 
     public Film save(Film film);
 
-    public void updateFilmCover(String profilePictureUrl, Long idUser);
-
 }

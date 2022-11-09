@@ -1,4 +1,4 @@
-package upchi.api.movie.film.services;
+package upchi.api.movie.cover.services;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -18,13 +18,13 @@ import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 
-import upchi.api.movie.film.services.interfaces.ICoverImageService;
-import upchi.api.movie.film.services.interfaces.IFilmService;
+import upchi.api.movie.cover.services.interfaces.ICoverImageService;
+import upchi.api.movie.cover.services.interfaces.ICoverService;
 
 @Service
 public class CoverImageServiceImpl implements ICoverImageService {
     @Autowired
-    IFilmService filmServices;
+    ICoverService coverServices;
 
     private AmazonS3 s3client;
     private String ENDPOINT_URL = "s3.us-east-1.amazonaws.com";
@@ -48,7 +48,7 @@ public class CoverImageServiceImpl implements ICoverImageService {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        filmServices.updateFilmCover(fileUrl, idUser);
+        coverServices.updateFilmCover(fileUrl, idUser);
         return fileUrl;
     }
 

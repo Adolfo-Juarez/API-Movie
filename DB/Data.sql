@@ -301,56 +301,67 @@ INSERT INTO api_movie.studios (headquarters, name) VALUES
 
 -- Insercciones en PREMIERES
 
-INSERT INTO api_movie.premieres (cinema, date) VALUES 
-(
-    'Ohio Theatre, 138 Park Ave., W., Mansfield, Ohio', 
-    '1994-09-23 00:00:00'
-),
-(
-    "Loew's State Theatre, Times Square, New York City", 
-    '1972-03-14 00:00:00'
-),
-(
-    'AMC Lincoln Square 13 & IMAX, 1998 Broadway, New York, 10023', 
-    '2008-07-14 00:00:00'
-),
-(
-    'Cinema in New York City', 
-    '1974-12-12 00:00:00'
-),
-(
-    'Saban Theatre, 8440 Wilshire Boulevard Beverly Hills, California United States', 
-    '1957-04-10 00:00:00'
-),
-(
-    'Theatres in Washington, D.C.', 
-    '1993-11-30 00:00:00'
-),
-(
-    'Embassy Theatre, 9-11 Kent Terrace, Wellington, New Zealand', 
-    '2003-12-17 00:00:00'
-),
-(
-    'Cannes Film Festival, Cannes, France', 
-    '1994-05-21 00:00:00'
-),
-(
-    'Odeon Luxe Leicester Square, 24-26 Leicester Square, London', 
-    '2001-12-10 00:00:00'
-),
-(
-    'Cinnema in Italy', 
-    '1966-12-23 00:00:00'
-);
+-- INSERT INTO api_movie.premieres (cinema, date) VALUES 
+-- (
+--     'Ohio Theatre, 138 Park Ave., W., Mansfield, Ohio', 
+--     '1994-09-23 00:00:00'
+-- ),
+-- (
+--     "Loew's State Theatre, Times Square, New York City", 
+--     '1972-03-14 00:00:00'
+-- ),
+-- (
+--     'AMC Lincoln Square 13 & IMAX, 1998 Broadway, New York, 10023', 
+--     '2008-07-14 00:00:00'
+-- ),
+-- (
+--     'Cinema in New York City', 
+--     '1974-12-12 00:00:00'
+-- ),
+-- (
+--     'Saban Theatre, 8440 Wilshire Boulevard Beverly Hills, California United States', 
+--     '1957-04-10 00:00:00'
+-- ),
+-- (
+--     'Theatres in Washington, D.C.', 
+--     '1993-11-30 00:00:00'
+-- ),
+-- (
+--     'Embassy Theatre, 9-11 Kent Terrace, Wellington, New Zealand', 
+--     '2003-12-17 00:00:00'
+-- ),
+-- (
+--     'Cannes Film Festival, Cannes, France', 
+--     '1994-05-21 00:00:00'
+-- ),
+-- (
+--     'Odeon Luxe Leicester Square, 24-26 Leicester Square, London', 
+--     '2001-12-10 00:00:00'
+-- ),
+-- (
+--     'Cinnema in Italy', 
+--     '1966-12-23 00:00:00'
+-- );
+
+INSERT INTO api_movie.covers(route) VALUES 
+("https://api-movies.s3.us-east-1.amazonaws.com/the-shawshank-redemption-API-Movie.jpg"),
+("https://api-movies.s3.us-east-1.amazonaws.com/the-godfather-API-Movie.jpg"),
+("https://api-movies.s3.us-east-1.amazonaws.com/the-dark-knight-API-Movie.jpg"),
+("https://api-movies.s3.us-east-1.amazonaws.com/the-godfather-part-II-API-Movie.jpg"),
+("https://api-movies.s3.us-east-1.amazonaws.com/12-angry-men-API-Movie.jpg"),
+("https://api-movies.s3.us-east-1.amazonaws.com/schindlers-list-API-Movie.jpg"),
+("https://api-movies.s3.us-east-1.amazonaws.com/the-lord-of-the-rings-the-return-of-the-king-API-Movie.jpg"),
+("https://api-movies.s3.us-east-1.amazonaws.com/pulp-fiction-API-Movie.jpg"),
+("https://api-movies.s3.us-east-1.amazonaws.com/the-good-the-bad-and-the-ugly-API-Movie.jpg"),
+("https://api-movies.s3.us-east-1.amazonaws.com/the-good-the-bad-and-the-ugly-API-Movie.jpg");
 
 -- INSERCCIÓN a Film
-INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id, premier_id, producer_id, studio_id) VALUES
+INSERT INTO api_movie.films(title, duration, year, genre, cover_id, director_id, producer_id, studio_id) VALUES
 (
     "The Shawshank Redemption",
     142,
     1994,
     "Drama",
-    "the-shawshank-redemption-API-Movie.jpg",
     1,
     1,
     3,
@@ -361,7 +372,6 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     175,
     1972,
     "Crime",
-    "the-godfather-API-Movie.jpg",
     2,
     2,
     9,
@@ -372,7 +382,6 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     152,
     2008,
     "Action",
-    "the-dark-knight-API-Movie.jpg",
     3,
     3,
     1,
@@ -383,9 +392,8 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     202,
     1974,
     "Crime",
-    "the-godfather-part-II-API-Movie.jpg",
-    2,
     4,
+    2,
     2,
     2
 ),
@@ -394,9 +402,8 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     96,
     1957,
     "Crime",
-    "12-angry-men-API-Movie.jpg",
-    4,
     5,
+    4,
     7,
     4
 ),
@@ -405,9 +412,8 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     195,
     1993,
     "Biography",
-    "schindlers-list-API-Movie.jpg",
-    8,
     6,
+    8,
     4,
     5
 ),
@@ -416,9 +422,8 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     201,
     2003,
     "Adventure",
-    "the-lord-of-the-rings-the-return-of-the-king-API-Movie.jpg",
-    6,
     7,
+    6,
     8,
     6
 ),
@@ -427,9 +432,8 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     154,
     1994,
     "Crime",
-    "pulp-fiction-API-Movie.jpg",
-    7,
     8,
+    7,
     5,
     7
 ),
@@ -438,9 +442,8 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     178,
     2001,
     "Action",
-    "The Lord of the Rings: The Fellowship of the Ring",
-    6,
     9,
+    6,
     1,
     6
 ),
@@ -449,9 +452,8 @@ INSERT INTO api_movie.films(title, duration, year, genre, img_route, director_id
     178,
     1966,
     "Adventure",
-    "the-good-the-bad-and-the-ugly-API-Movie.jpg",
-    9,
     10,
+    9,
     6,
     8
 );
