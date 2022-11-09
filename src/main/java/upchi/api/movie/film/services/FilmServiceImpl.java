@@ -81,6 +81,7 @@ public class FilmServiceImpl implements IFilmService {
         film.setDuration(request.getDuration());
         film.setYear(request.getYear());
         film.setGenre(request.getGenre());
+        film.setCover(coverService.findOneAndEnsureExist((long) 1));
 
         return film;
     }

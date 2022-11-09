@@ -39,8 +39,13 @@ public class CoverServiceImpl implements ICoverService{
     public String getRouteById(Long id) {
         Cover cover = filmService.findOneAndEnsureExist(id).getCover();
         return cover.getRoute();
+    } 
+
+
+    @Override
+    public Cover findOneAndEnsureExist(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Film is not available"));
     }
-    
-    
 
 }

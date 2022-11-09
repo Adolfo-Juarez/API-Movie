@@ -10,7 +10,7 @@
 
 -- INSERCCIÓN a Producer
 
-INSERT INTO api_movie.producers(name, lastname, age, nationality) VALUES
+INSERT INTO u554002883_api_movie.producers(name, lastname, age, nationality) VALUES
 (
     "David",
     "O. Selznick",
@@ -68,7 +68,7 @@ INSERT INTO api_movie.producers(name, lastname, age, nationality) VALUES
 
 -- INSERCCIÓN a Director
 
-INSERT INTO api_movie.directors(name, lastname, nickname, age, nationality) VALUES 
+INSERT INTO u554002883_api_movie.directors(name, lastname, nickname, age, nationality) VALUES 
 (
     "Frank",
     "Darabont",
@@ -135,7 +135,7 @@ INSERT INTO api_movie.directors(name, lastname, nickname, age, nationality) VALU
 
 -- INSERCIÓN a Actor
 
-INSERT INTO api_movie.actors (name, lastname, nickname, age, nationality) VALUES 
+INSERT INTO u554002883_api_movie.actors (name, lastname, nickname, age, nationality) VALUES 
 (
     "Morgan",
     "Freeman",
@@ -265,7 +265,7 @@ INSERT INTO api_movie.actors (name, lastname, nickname, age, nationality) VALUES
 
 -- INSERCCIÓN en Studio
 
-INSERT INTO api_movie.studios (headquarters, name) VALUES 
+INSERT INTO u554002883_api_movie.studios (headquarters, name) VALUES 
 (
     "Culver City, California, United States",
     "Columbia Pictures"
@@ -301,7 +301,7 @@ INSERT INTO api_movie.studios (headquarters, name) VALUES
 
 -- Insercciones en PREMIERES
 
--- INSERT INTO api_movie.premieres (cinema, date) VALUES 
+-- INSERT INTO u554002883_api_movie.premieres (cinema, date) VALUES 
 -- (
 --     'Ohio Theatre, 138 Park Ave., W., Mansfield, Ohio', 
 --     '1994-09-23 00:00:00'
@@ -343,7 +343,8 @@ INSERT INTO api_movie.studios (headquarters, name) VALUES
 --     '1966-12-23 00:00:00'
 -- );
 
-INSERT INTO api_movie.covers(route) VALUES 
+INSERT INTO u554002883_api_movie.covers(route) VALUES 
+("No route given"),
 ("https://api-movies.s3.us-east-1.amazonaws.com/the-shawshank-redemption-API-Movie.jpg"),
 ("https://api-movies.s3.us-east-1.amazonaws.com/the-godfather-API-Movie.jpg"),
 ("https://api-movies.s3.us-east-1.amazonaws.com/the-dark-knight-API-Movie.jpg"),
@@ -356,13 +357,13 @@ INSERT INTO api_movie.covers(route) VALUES
 ("https://api-movies.s3.us-east-1.amazonaws.com/the-good-the-bad-and-the-ugly-API-Movie.jpg");
 
 -- INSERCCIÓN a Film
-INSERT INTO api_movie.films(title, duration, year, genre, cover_id, director_id, producer_id, studio_id) VALUES
+INSERT INTO u554002883_api_movie.films(title, duration, year, genre, cover_id, director_id, producer_id, studio_id) VALUES
 (
     "The Shawshank Redemption",
     142,
     1994,
     "Drama",
-    1,
+    2,
     1,
     3,
     1
@@ -372,7 +373,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, cover_id, director_id,
     175,
     1972,
     "Crime",
-    2,
+    3,
     2,
     9,
     2
@@ -382,7 +383,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, cover_id, director_id,
     152,
     2008,
     "Action",
-    3,
+    4,
     3,
     1,
     3
@@ -392,7 +393,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, cover_id, director_id,
     202,
     1974,
     "Crime",
-    4,
+    5,
     2,
     2,
     2
@@ -402,7 +403,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, cover_id, director_id,
     96,
     1957,
     "Crime",
-    5,
+    6,
     4,
     7,
     4
@@ -412,7 +413,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, cover_id, director_id,
     195,
     1993,
     "Biography",
-    6,
+    7,
     8,
     4,
     5
@@ -422,7 +423,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, cover_id, director_id,
     201,
     2003,
     "Adventure",
-    7,
+    8,
     6,
     8,
     6
@@ -432,7 +433,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, cover_id, director_id,
     154,
     1994,
     "Crime",
-    8,
+    9,
     7,
     5,
     7
@@ -442,7 +443,7 @@ INSERT INTO api_movie.films(title, duration, year, genre, cover_id, director_id,
     178,
     2001,
     "Action",
-    9,
+    10,
     6,
     1,
     6
@@ -452,14 +453,14 @@ INSERT INTO api_movie.films(title, duration, year, genre, cover_id, director_id,
     178,
     1966,
     "Adventure",
-    10,
+    11,
     9,
     6,
     8
 );
 
 -- Relaciones films-actors
-INSERT INTO api_movie.films_actors (actor_id, film_id) VALUES
+INSERT INTO u554002883_api_movie.films_actors (actor_id, film_id) VALUES
 (
     1,
     1

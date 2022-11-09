@@ -18,6 +18,7 @@ import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 
+import upchi.api.movie.cover.repositories.ICoverRepository;
 import upchi.api.movie.cover.services.interfaces.ICoverImageService;
 import upchi.api.movie.cover.services.interfaces.ICoverService;
 
@@ -25,6 +26,9 @@ import upchi.api.movie.cover.services.interfaces.ICoverService;
 public class CoverImageServiceImpl implements ICoverImageService {
     @Autowired
     ICoverService coverServices;
+
+    @Autowired
+    ICoverRepository repository;
 
     private AmazonS3 s3client;
     private String ENDPOINT_URL = "s3.us-east-1.amazonaws.com";
