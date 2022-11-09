@@ -79,4 +79,10 @@ public class ProducerServiceImpl implements IProducerService {
 
         return producer;
     }
+
+    @Override
+    public Producer findOneAndEnsureExist(Long id) {
+        return repository.findById(id)
+        .orElseThrow(()-> new RuntimeException("The producer does not exist"));
+    }
 }

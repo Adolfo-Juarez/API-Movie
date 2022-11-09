@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import upchi.api.movie.cover.services.interfaces.ICoverService;
+import upchi.api.movie.director.services.interfaces.IDirectorService;
 import upchi.api.movie.film.controllers.dtos.requests.PostFilmRequest;
 import upchi.api.movie.film.controllers.dtos.requests.UpdateFilmRequest;
 import upchi.api.movie.film.controllers.dtos.responses.GetFilmResponse;
@@ -14,6 +15,8 @@ import upchi.api.movie.film.controllers.dtos.responses.PostFilmResponse;
 import upchi.api.movie.film.entities.Film;
 import upchi.api.movie.film.repositories.IFilmRepository;
 import upchi.api.movie.film.services.interfaces.IFilmService;
+import upchi.api.movie.producer.services.interfaces.IProducerService;
+import upchi.api.movie.studio.services.interfaces.IStudioService;
 
 @Service
 public class FilmServiceImpl implements IFilmService {
@@ -23,6 +26,15 @@ public class FilmServiceImpl implements IFilmService {
 
     @Autowired
     ICoverService coverService;
+
+    @Autowired
+    IProducerService producerService;
+
+    @Autowired
+    IDirectorService directorService;
+
+    @Autowired
+    IStudioService studioService;
 
     @Override
     public List<GetFilmResponse> list() {
@@ -81,7 +93,11 @@ public class FilmServiceImpl implements IFilmService {
         film.setDuration(request.getDuration());
         film.setYear(request.getYear());
         film.setGenre(request.getGenre());
+
         film.setCover(coverService.findOneAndEnsureExist((long) 1));
+        film.setDirector(directorService.findOneAndEnsureExist(request.getId_director()));
+        film.setProducer(producerService.findOneAndEnsureExist(request.getId_producer()));
+        film.setStudio(studioService.findOneAndEnsureExist(request.getId_studio()));
 
         return film;
     }

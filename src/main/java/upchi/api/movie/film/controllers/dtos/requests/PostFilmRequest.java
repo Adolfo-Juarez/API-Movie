@@ -10,5 +10,7 @@ public class PostFilmRequest {
     private Float duration;
     private Integer year;
     private String genre;
-    
+    private Long id_director;
+    private Long id_producer;
+    private Long id_studio;
 }

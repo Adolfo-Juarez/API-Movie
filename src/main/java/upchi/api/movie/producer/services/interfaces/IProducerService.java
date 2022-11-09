@@ -1,9 +1,11 @@
 package upchi.api.movie.producer.services.interfaces;
 
 import java.util.List;
+
 import upchi.api.movie.producer.controllers.dtos.requests.PostProducerRequest;
 import upchi.api.movie.producer.controllers.dtos.requests.UpdateProducerRequest;
 import upchi.api.movie.producer.controllers.dtos.responses.GetProducerResponse;
+import upchi.api.movie.producer.entities.Producer;
 
 public interface IProducerService {
     public GetProducerResponse create (PostProducerRequest request);
@@ -15,4 +17,7 @@ public interface IProducerService {
     public GetProducerResponse update(Long id, UpdateProducerRequest request);
 
     public void delete(Long id);
+
+    public Producer findOneAndEnsureExist(Long id);
+
 }

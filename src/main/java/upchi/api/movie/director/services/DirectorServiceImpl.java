@@ -88,4 +88,10 @@ public class DirectorServiceImpl implements IDirectorService {
 
     }
 
+    @Override
+    public Director findOneAndEnsureExist(Long id) {
+        return repository.findById(id)
+        .orElseThrow(()-> new RuntimeException("The director does not exist"));
+    }
+
 }

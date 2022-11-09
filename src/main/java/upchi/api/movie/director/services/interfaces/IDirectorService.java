@@ -5,6 +5,7 @@ import java.util.List;
 import upchi.api.movie.director.controllers.dtos.requests.PostDirectorRequest;
 import upchi.api.movie.director.controllers.dtos.requests.UpdateDirectorRequest;
 import upchi.api.movie.director.controllers.dtos.responses.GetDirectorResponse;
+import upchi.api.movie.director.entities.Director;
 
 public interface IDirectorService {
 
@@ -17,5 +18,7 @@ public interface IDirectorService {
     public GetDirectorResponse update(Long id, UpdateDirectorRequest request);
 
     public void delete(Long id);
+
+    public Director findOneAndEnsureExist(Long id);
 
 }
